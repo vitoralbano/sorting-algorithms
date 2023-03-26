@@ -1,5 +1,7 @@
 package products.vehicles;
 
+import java.text.DecimalFormat;
+
 import products.Product;
 
 /**
@@ -32,7 +34,8 @@ public class Car implements Product{
 
     @Override
     public String toString() {
-        return "Car [name=" + name + ", value=" + value + "]";
+        return String.format("%s -> %.2f", name, value);
+        
     }
 
 }

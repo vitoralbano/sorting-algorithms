@@ -18,4 +18,21 @@ public class Sorting {
             items[currentIndex] = aux;
         }
     }
+
+    public static <T extends Comparable> void bubbleSort(T[] items) {
+        for (int i = 0; i < items.length; i++) {
+            boolean swap = false;
+
+            for (int m = i + 1; m < items.length; m++) {
+                if (items[m].compareTo(items[i]) < 0) {
+                    swap = true;
+                    T aux = items[m];
+                    items[m] = items[i];
+                    items[i] = aux;
+                }
+            }
+
+            if (swap == false) { break; }
+        }
+    }
 }
