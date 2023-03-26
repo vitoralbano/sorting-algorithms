@@ -12,7 +12,6 @@ public class Main {
         Product[] cars = createCars();
         Sorting.selectionSort(cars);
         printList(cars);
-        
     }
 
     private static void printList(Object[] list) {
