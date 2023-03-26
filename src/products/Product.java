@@ -1,6 +1,6 @@
 package products;
 
-public interface Product {
+public interface Product extends Comparable<Product> {
     String getName();
     Double getValue();
 }
