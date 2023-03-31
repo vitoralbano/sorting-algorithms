@@ -29,6 +29,13 @@ public class Main {
         Sorting.bubbleSort(cars);
         printList(cars);
         
+
+        printSeparator();
+
+        System.out.println("Insertion sort, worse: O(n^2), average: O(nˆ2): best: O(n)\n");
+        cars = createCars();
+        Sorting.insertionSort(cars);
+        printList(cars);        
     }
 
     private static void printList(Object[] list) {
