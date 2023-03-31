@@ -35,4 +35,19 @@ public class Sorting {
             if (swap == false) { break; }
         }
     }
+
+    public static <T extends Comparable> void insertionSort(T[] items) {
+        for (int index = 0; index < items.length; index++) {
+            int targetIndex = index;
+            int previousIndex = index - 1;
+            while(targetIndex > 0 && items[targetIndex].compareTo(items[previousIndex]) < 0) {
+                T aux = items[targetIndex];
+                items[targetIndex] = items[previousIndex];
+                items[previousIndex] = aux; 
+                targetIndex--;
+                previousIndex = targetIndex - 1;
+            }
+        }
+    }
+
 }
