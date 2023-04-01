@@ -1,15 +1,35 @@
 # Sorting Algorithms
 
-## Insertion Sort[^1]
+This is a revision of some sort algorithms, aiming to refresh topics that I've saw in college.
+So, fell free to be in touch if there is something wrong or anything else..
+Enjoy..
 
-|   Case    |   Complexity  |
-|:---       |   ---:        |
-| Worst     | `O(n^2)`      |
-| Average   | `O(n^2)`      |
-| Best      | `O(n)`        |
-| Stable    | `true`        |
+## Index
+---
+1. Bubble sort
+2. Selection sort
+3. [Insertion sort](#insertion-sort)
 
-### Explanation
+## Complexity summary
+
+|   Algorithm       |   Worst   |   Average     |   Best    |   Stable  |
+|:---               |:---:      |:---:          |:---:      |:---:      |
+|Bubble sort        | `O(n^2)`  | `O(n^2)`      | `O(n)`    | &check;   |
+|Heap sort [soon]   |           |               |           |           |
+|Insertion sort     | `O(n^2)`  | `O(nˆ2)`      | `O(n)`    | &check;   |
+|Merge sort [soon]  |           |               |           |           |
+|Quick sort [soon]  |           |               |           |           |
+|Selection sort     | `O(n^2)`   | `O(n^2)`     | `O(n^2)`  | -         |  
+
+
+## Insertion Sort
+---
+
+|   Algorithm   |   Worst   |   Average     |   Best    |   Stable  |
+|:---           |:---:      |:---:          |:---:      |:---:      |
+|Insertion sort | `O(n^2)`  | `O(nˆ2)`      | `O(n)`    | &check;   |
+
+### Explanation[^1]
 
 Basicaly, the insertion sort consider that the input list has two subscections. Starting with **sorted** elements, and immediately after, the **unsorted** elements section. In its first iteraction, the first element, from index 0, is considered as the **sorted** section. From the second element (index 1) and so on, starts the comparisons.
 
@@ -20,7 +40,7 @@ These comparisions are made with all positions of the input, so, if it is not so
 
 The insertion sort is slow and it is not recommended for big amount of data.
 
-#### Ordenação por inserção
+#### Ordenação por Inserção
 Basicamente, a ordenação por inserção considera que a lista de dados possui duas subseções. Començando com os elementos **ordenados**, e imediatamente após, a seção de elementos **não ordenados**.
 
 Desde que o índice alvo da entrada de dados for superior a 0, e seu valor for menor que o valor do índice anterior, esses valores são trocados e o índice alvo é decrementado. Esta comparação é feita repetidamente até que uma das condições resultem em falso, como, a posição do **índice alvo** não for maior que 0 ou o valor da posição do **índice alvo** for **maior ou igual** ao valor da posição **anterior ao índice alvo**. Após essas comparações e ordenações, dentro da seção **classificada**, o **índice** é incrementado, obtendo o próximo elemento **não classificado**.
