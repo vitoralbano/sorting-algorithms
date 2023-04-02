@@ -1,6 +1,6 @@
 *.class
 ./build
 ./build/*
-.vscode
-.vscode/*
+./vscode
+./vscode/*
 *.DS_Store
