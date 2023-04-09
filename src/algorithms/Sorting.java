@@ -22,6 +22,10 @@ public class Sorting {
         }
     }
 
+    public static <T extends Comparable> void heapSort(T[] items) {
+        
+    }
+
     public static <T extends Comparable> void insertionSort(T[] items) {
         for (int index = 0; index < items.length; index++) {
             int targetIndex = index;
