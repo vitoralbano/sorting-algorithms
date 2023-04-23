@@ -18,7 +18,9 @@ public class Sorting {
                 }
             }
 
-            if (swap == false) { break; }
+            if (swap == false) {
+                break;
+            }
         }
     }
 
@@ -26,16 +28,16 @@ public class Sorting {
         for (int index = 0; index < items.length; index++) {
             int targetIndex = index;
             int previousIndex = index - 1;
-            while(targetIndex > 0 && items[targetIndex].compareTo(items[previousIndex]) < 0) {
+            while (targetIndex > 0 && items[targetIndex].compareTo(items[previousIndex]) < 0) {
                 T aux = items[targetIndex];
                 items[targetIndex] = items[previousIndex];
-                items[previousIndex] = aux; 
+                items[previousIndex] = aux;
                 targetIndex--;
                 previousIndex = targetIndex - 1;
             }
         }
     }
-    
+
     public static <T extends Comparable> void selectionSort(T[] items) {
         for (int currentIndex = 0; currentIndex < items.length; currentIndex++) {
             int smaller = currentIndex;
@@ -47,6 +49,20 @@ public class Sorting {
             T aux = items[smaller];
             items[smaller] = items[currentIndex];
             items[currentIndex] = aux;
+        }
+    }
+
+    public static <T extends Comparable> void shellSort(T[] items) {
+        Integer n = items.length;
+        for (int gap = n / 2; gap > 0; gap /= 2) {
+            for (int i = gap; i < n; i++) {
+                T aux = items[i];
+                int j;
+                for (j = i; j >= gap && items[j - gap].compareTo(aux) > 0; j -= gap) {
+                    items[j] = items[j - gap];
+                }
+                items[j] = aux;
+            }
         }
     }
 }
