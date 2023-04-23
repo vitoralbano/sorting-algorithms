@@ -8,21 +8,26 @@ Enjoy..
 
 1. [Complexity summary](#complexity-summary)
 2. Bubble sort
-3. Selection sort
+3. Heap sort
 4. [Insertion sort](#insertion-sort)
+5. Merge sort
+6. Quick sort
+7. Selection sort
+8. Shell sort
 
 ---
 
 ## Complexity summary
 
-|   Algorithm       |   Worst   |   Average     |   Best    |   Stable  |
-|:---               |:---:      |:---:          |:---:      |:---:      |
-|Bubble sort        | `O(n^2)`  | `O(n^2)`      | `O(n)`    | &check;   |
-|Heap sort [soon]   |           |               |           |           |
-|Insertion sort     | `O(n^2)`  | `O(nˆ2)`      | `O(n)`    | &check;   |
-|Merge sort [soon]  |           |               |           |           |
-|Quick sort [soon]  |           |               |           |           |
-|Selection sort     | `O(n^2)`  | `O(n^2)`      | `O(n^2)`  | -         |  
+| Algorithm           |   Worst   |   Average     |   Best    | Stable  |
+|:--------------------|:---:      |:---:          |:---:      |:-------:|
+| Bubble sort         | `O(n^2)`  | `O(n^2)`      | `O(n)`    | &check; |
+| Heap sort [soon]    |           |               |           |         |
+| Insertion sort      | `O(n^2)`  | `O(nˆ2)`      | `O(n)`    | &check; |
+| Merge sort [soon]   |           |               |           |         |
+| Quick sort [soon]   |           |               |           |         |
+| Selection sort      | `O(n^2)`  | `O(n^2)`      | `O(n^2)`  |    -    |
+ | Shell sort          | `O(n^2)`  | `O(n * log n)` | `O(n * log n)` | - |
 
 
 # Insertion Sort
